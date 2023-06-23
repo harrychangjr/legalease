@@ -38,6 +38,17 @@ if st.button("Add Entry"):
     data.to_csv(data_file, index=False)  # Save the data to the file
     st.success("Entry added successfully!")
 
+# Clear data button
+if st.button("Clear Data"):
+    data = pd.DataFrame(columns=["Date", "Mood", "Journal"])
+    if os.path.exists(data_file):
+        os.remove(data_file)
+    st.warning("Mood data cleared!")
+
+# Display mood and journal data table
+#st.subheader("Mood and Journal Entries")
+#st.dataframe(data)
+
 # Display mood and journal data table
 #st.subheader("Mood and Journal Entries")
 #st.dataframe(data)
@@ -88,7 +99,7 @@ else:
     st.info("Add mood data to visualize trends.")
 
 # Create scatter plot with regression line
-st.subheader("Mood and Sentiment Score - Trend Analysis (R-squared value)")
+st.subheader("Scores Analysis (R-squared value)")
 plt.figure(figsize=(8, 6))
 sns.regplot(data=data, x="Mood", y="Sentiment Score")
 plt.xlabel("Mood")

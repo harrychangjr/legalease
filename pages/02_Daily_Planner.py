@@ -22,12 +22,12 @@ openai.api_key = st.secrets['openai_key']
 
 can_confirm = [False, False] 
 
-story = "Man decides to start work at "
+story = "User decides to start work at "
 # User's working hours
 start_time = st.time_input("Select when your working day starts", value=datetime.time())
 end_time = st.time_input("Select when your working day ends", value=datetime.time())
 if (start_time >= end_time):
-    st.write("End time has to be after the start time")
+    st.write("**Note: End time has to be after the start time**")
     can_confirm[0] = False
 else:
     can_confirm[0] = True
@@ -39,7 +39,7 @@ else:
 
 # User's tasks
 num_tasks = st.number_input("Select the number of tasks", min_value=1, max_value=20, value=1, step=1)
-story += f" He has {num_tasks} number of tasks."
+story += f" He/she has {num_tasks} number of tasks."
 for i in range(1, int(num_tasks) + 1):
     if (len(can_confirm) <= i):
         can_confirm.append(False)
@@ -52,7 +52,7 @@ for i in range(1, int(num_tasks) + 1):
         story += f" Task {str(i)}: {task_desc}."
     task_hours = st.number_input("Type in the number of hours task " + str(i) + " takes", min_value=0.5, max_value=float(20), value=0.5, step=0.5, key="task_hours" + str(i))
     story += f" This task takes {task_hours} amount of hours."
-story += f" Assume he needs at least 0.5 hours of break today. Plan an optimal schedule for him."
+story += f" Assume he/she needs at least 0.5 hours of break today. Plan an optimal schedule for him."
 st.write(story)
 
 # Confirmation button, only activated when the conditions are fulfilled
