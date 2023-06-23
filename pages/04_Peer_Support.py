@@ -3,6 +3,7 @@ import datetime
 from PIL import Image
 
 legalease = Image.open("assets/LegalEase.jpg")
+banner = Image.open("assets/banner.jpg")
 
 # Page configuration
 st.set_page_config(
@@ -12,10 +13,10 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 st.sidebar.image(legalease)
+st.image(banner)
 
 
 # Set header and subheader of the page
-st.title("LegalEase")
 st.subheader("Peer Support")
 st.write("*A platform for lawyers to connect, share experiences and support each other.*")
 

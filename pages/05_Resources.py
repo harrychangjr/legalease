@@ -3,10 +3,12 @@ from PIL import Image
 from streamlit_option_menu import option_menu
 
 legalease = Image.open("assets/LegalEase.jpg")
+banner = Image.open("assets/banner.jpg")
 
 st.set_page_config(page_title="LegalEase - Resources", page_icon = "👨🏻‍⚖️", layout = "centered", initial_sidebar_state = "auto")
 #st.sidebar.title("LegalEase")
 st.sidebar.image(legalease)
+st.image(banner)
 
 lawsoc = Image.open("assets/lawsoc.jpg")
 sos = Image.open("assets/sos.jpg")
@@ -27,7 +29,7 @@ zeeq = Image.open("assets/zeeq.jpg")
 apollo = Image.open("assets/apollo.jpg")
 
 
-st.header("LegalEase")
+#st.header("LegalEase")
 st.subheader("Resources")
 
 st.write("*Feeling burnt out and need help? Here are some mental health resources to get you started!*")

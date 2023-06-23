@@ -10,11 +10,13 @@ from scipy import stats
 from nltk.sentiment import SentimentIntensityAnalyzer
 
 legalease = Image.open("assets/LegalEase.jpg")
+banner = Image.open("assets/banner.jpg")
 
 st.set_page_config(page_title="LegalEase - Mood Tracker", page_icon = "👨🏻‍⚖️", layout = "centered", initial_sidebar_state = "auto")
 st.sidebar.image(legalease)
+st.image(banner)
 
-st.header("LegalEase")
+#st.header("LegalEase")
 st.subheader("Mood Tracker with Journal")
 st.write("*Track your daily mood, journal entries, and visualize mood trends over time!*")
 

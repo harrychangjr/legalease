@@ -3,15 +3,17 @@ from PIL import Image
 from streamlit_option_menu import option_menu
 
 legalease = Image.open("assets/LegalEase.jpg")
+banner = Image.open("assets/banner.jpg")
 
 st.set_page_config(page_title="LegalEase - About Us", page_icon = "👨🏻‍⚖️", layout = "centered", initial_sidebar_state = "auto")
 #st.sidebar.title("LegalEase")
 st.sidebar.image(legalease)
+st.image(banner)
 
 # Use the following line to include your style.css file
 #st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
 
-st.header("LegalEase")
+#st.header("LegalEase")
 st.subheader("About Us!")
 
 harry = Image.open("assets/harry.jpg")
@@ -71,7 +73,7 @@ elif selected == "Summary":
 
     **What's next for LegalEase**
 
-    We aim to continue refining the AI's task scheduling capabilities and explore additional features that further support the mental well-being of legal professionals in a hybrid working environment. This could include virtual group activities, guided meditation sessions, and more.
+    We aim to continue refining the AI's task scheduling capabilities and explore additional features that further support the mental well-being of legal professionals in a hybrid working environment. This could include virtual group activities, guided meditation sessions, and more. Also, we aim to implement a login system using either Firebase or SingPass so that users can save their previous records in a safe manner should they need to check their personal data.
 
     **Built with**
 

@@ -5,15 +5,17 @@ import openai
 import datetime
 
 legalease = Image.open("assets/LegalEase.jpg")
+banner = Image.open("assets/banner.jpg")
 
 st.set_page_config(page_title="LegalEase - Daily Planner", page_icon = "👨🏻‍⚖️", layout = "centered", initial_sidebar_state = "auto")
 #st.sidebar.title("LegalEase")
 st.sidebar.image(legalease)
+st.image(banner)
 
 # Use the following line to include your style.css file
 #st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
 
-st.header("LegalEase")
+#st.header("LegalEase")
 st.subheader("Daily Planner")
 
 st.write("*Unable to take appropriate breaks at work due to your hectic schedule? Daily Planner got you covered! Just input your tasks for the day and the approximate time required in the fields below!*")
