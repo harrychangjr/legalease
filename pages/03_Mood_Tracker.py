@@ -40,7 +40,8 @@ journal = st.text_area("Journal Entry")
 
 # Add mood and journal data to DataFrame
 if st.button("Add Entry"):
-    data = data.append({"Date": str(date), "Mood": mood, "Journal": journal}, ignore_index=True)
+    entry = pd.DataFrame({"Date": [str(date)], "Mood": [mood], "Journal": [journal]})
+    data = pd.concat([data, entry], ignore_index=True)
     data.to_csv(data_file, index=False)  # Save the data to the file
     st.success("Entry added successfully!")
 
@@ -50,10 +51,6 @@ if st.button("Clear Data"):
     if os.path.exists(data_file):
         os.remove(data_file)
     st.warning("Mood data cleared!")
-
-# Display mood and journal data table
-#st.subheader("Mood and Journal Entries")
-#st.dataframe(data)
 
 # Display mood and journal data table
 #st.subheader("Mood and Journal Entries")
