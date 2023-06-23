@@ -8,6 +8,10 @@ import os
 import seaborn as sns
 from scipy import stats
 from nltk.sentiment import SentimentIntensityAnalyzer
+import nltk
+nltk.download('vader_lexicon')
+
+  
 
 legalease = Image.open("assets/LegalEase.jpg")
 banner = Image.open("assets/banner.jpg")
