@@ -7,7 +7,7 @@ The inspiration behind LegalEase stems from the challenges posed by the COVID-19
 
 The application consists of four main features. The AI-powered Daily Planner suggests an optimal schedule based on the lawyer's tasks, considering the importance of breaks and personal time to prevent burnout. The Mood Tracker allows users to log their daily mood and visualize emotional patterns over time. Peer Support provides a platform for lawyers to seek advice and support from their peers through a discussion forum. Mental Health Resources offer curated content and information to assist lawyers in accessing mental health support.
 
-LegalEase was built using Streamlit, HTML, and CSS and OpenAI API, which was utilized for the back-end functionality. The AI-powered Daily Planner sets LegalEase apart, helping lawyers manage their workload effectively and reducing stress. The Mood Tracker offers a unique data-driven approach to monitor mental health regularly.
+LegalEase was built using Python, Streamlit, HTML, CSS and OpenAI API, which was utilized for the back-end functionality. The AI-powered Daily Planner sets LegalEase apart, helping lawyers manage their workload effectively and reducing stress. The Mood Tracker offers a unique data-driven approach to monitor mental health regularly.
 
 The team faced challenges in transitioning from their usual skill set to Streamlit and integrating Firebase for user data storage and login system implementation. Moving forward, the team plans to refine the AI's task scheduling capabilities and explore additional features such as virtual group activities and guided meditation sessions. They also aim to implement a secure login system using Firebase or SingPass to allow users to save and access their previous records safely.
 
