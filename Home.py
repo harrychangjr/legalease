@@ -31,7 +31,7 @@ You may also check out our demo video below, as a quick walkthrough of our appli
 
 """)
 
-#st.video
-st.write("*Video updated as of 23 June 2023, to be published*")
+st.video("https://youtu.be/DcyO8CASJ2I")
+st.write("*Video as of 23 June 2023*")
 
 st.write("*Copyright © 2023 TPJC - Harry, Brendan, Yong Jun, Ryan*") 
