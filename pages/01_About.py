@@ -46,17 +46,19 @@ elif selected == "Summary":
 
     **What it does**
 
-    Our application will consist of three main features:
+    Our application will consist of four main features:
 
     - **Daily Planner:** Powered by OpenAI, the AI suggests an optimal schedule based on the tasks inputted by the lawyer, taking into account the need for regular breaks and personal time to prevent burnout.
 
-    - **Mood Tracker:** Employees can log their mood and feelings daily, which can be visualized over time to help them understand their emotional patterns.
+    - **Mood Tracker:** Users can log their mood and feelings daily, which can be visualized over time to help them understand their emotional patterns.
+
+    - **Peer Support:** Users can rely on other fellow lawyers for advice, if needed, for mental health support and advice in the form of a discussion forum. They will get to interact with one another, similar to typical social media or forum posts such as Facebook or Twitter posts.
 
     - **Mental Health Resources:** Curated content and resources on mental health support for lawyers.
 
     **How we built it**
 
-    We used Streamlit, HTML and CSS as our front-end for our web application, and utilised the OpenAI API as well as Firebase for our back-end.
+    We used Streamlit, HTML and CSS as our front-end for our web application, and utilised the OpenAI API for our back-end.
 
     **What makes our solution stand out**
 
@@ -73,9 +75,9 @@ elif selected == "Summary":
 
     **Built with**
 
-    `Firebase` `Python` `Streamlit` `HTML` `CSS` `OpenAI API`
+    `Python` `Streamlit` `HTML` `CSS` `OpenAI API`
 
-    Github repo: https://github.com/ryan195/SMULIT
+    Github repo: https://github.com/harrychangjr/legalease
 
     """)
 

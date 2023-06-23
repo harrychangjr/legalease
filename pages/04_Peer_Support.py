@@ -1,5 +1,8 @@
 import streamlit as st
 import datetime
+from PIL import Image
+
+legalease = Image.open("assets/LegalEase.jpg")
 
 # Page configuration
 st.set_page_config(
@@ -8,11 +11,13 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="auto",
 )
+st.sidebar.image(legalease)
+
 
 # Set header and subheader of the page
 st.title("LegalEase")
 st.subheader("Peer Support")
-st.write("A platform for lawyers to connect, share experiences and support each other.")
+st.write("*A platform for lawyers to connect, share experiences and support each other.*")
 
 # Fake Discussion and Comment data
 discussions = [
@@ -65,9 +70,9 @@ def display_discussion(discussion):
 
 
 # Function to display a resource
-def display_resource(resource):
-    st.subheader(resource["title"])
-    st.write(f"[Link]({resource['link']})")
+# def display_resource(resource):
+    # st.subheader(resource["title"])
+    # st.write(f"[Link]({resource['link']})")
 
 
 # Sidebar for creating a new discussion
@@ -76,32 +81,29 @@ with st.sidebar:
     discussion_title = st.text_input("Discussion Title")
     discussion_text = st.text_area("Your Discussion")
     if st.button("Post Discussion"):
-        if "username" in st.session_state:
-            # Add the discussion to the list
-            discussions.append(
+        # Add the discussion to the list
+        discussions.append(
                 {
                     "id": len(discussions) + 1,
                     "title": discussion_title,
-                    "username": st.session_state.username,
+                    "username": st.session_state.get('username', 'anonymous'),
                     "timestamp": datetime.datetime.now().strftime("%B %d, %Y %H:%M"),
                     "text": discussion_text,
                     "comments": [],
                     "likes": 0,
                 }
             )
-            st.success("Your discussion has been posted.")
-        else:
-            st.info("Please login to post a discussion.")
+        st.success("Your discussion has been posted.")
 
 # Main Page
 # Display the discussions
-st.header("Discussions")
+st.header("Discussion Forum")
 for discussion in reversed(
     discussions
 ):  # Display the discussions in reverse order (latest first)
     display_discussion(discussion)
 
 # Display the resources
-st.header("Resources")
-for resource in resources:
-    display_resource(resource)
+#st.header("Resources")
+#for resource in resources:
+    #display_resource(resource)
