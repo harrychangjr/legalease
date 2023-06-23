@@ -10,7 +10,8 @@ st.set_page_config(
 )
 
 # Set header and subheader of the page
-st.title("LegalEase - Peer Support")
+st.title("LegalEase")
+st.subheader("Peer Support")
 st.write("A platform for lawyers to connect, share experiences and support each other.")
 
 # Fake Discussion and Comment data
